@@ -132,3 +132,19 @@ html, body {
         max-width: 1140px;
     }
 }
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 15px; /* Щоб контент не притискався до країв екрана */
+    }
+
+    .features-grid, .menu-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Зменшуємо розмір шрифтів, щоб заголовки не займали весь екран */
+    h1 {
+        font-size: 24px;
+    }
+}
