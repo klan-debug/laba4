@@ -1,0 +1,134 @@
+/* Налаштування базової колірної палітри з макетів Figma */
+:root {
+    --bg-main: #d9d9d9;        /* Світло-сірий фон сторінок */
+    --nav-purple: #7a637a;     /* Пастельний фіолетовий колір навбару */
+    --logo-grey: #969696;      /* Стандартний сірий колір для макетів фігур */
+    --blue-mock: #0078d4;      /* Синій акцент для іконок галереї */
+}
+
+body.logo-bg {
+    background-color: var(--bg-main);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Навігаційна панель */
+.custom-nav {
+    background-color: var(--nav-purple) !important;
+}
+
+.custom-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.custom-nav .nav-link:hover, 
+.custom-nav .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* Специфічні графічні елементи за Figma-прототипом */
+.main-logo-circle {
+    width: 240px;
+    height: 240px;
+    background-color: var(--logo-grey);
+    border-radius: 50%;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.phone-mockup {
+    width: 250px;
+    height: 480px;
+    background-color: #ffffff;
+    border: 8px solid #332233;
+    border-radius: 36px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Плейсхолдер картинок (сині картки із завантажень/про нас) */
+.feature-image-placeholder {
+    width: 180px;
+    height: 140px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    position: relative;
+}
+
+.mock-img {
+    width: 140px;
+    height: 100px;
+    background-color: var(--blue-mock);
+    border-radius: 12px;
+    position: relative;
+}
+
+/* Декоративні гори на синьому плейсхолдері */
+.mock-img::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 40px solid #005a9e;
+}
+
+/* Елементи футера */
+.footer-logo-circle {
+    width: 150px;
+    height: 150px;
+    background-color: var(--bg-main);
+    border-radius: 50%;
+}
+
+/* Стилі для сторінки FAQ та Premium */
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: rgba(122, 99, 122, 0.1) !important;
+    color: var(--nav-purple) !important;
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(122, 99, 122, 0.3);
+}
+
+.custom-submit-btn {
+    background-color: var(--nav-purple) !important;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.custom-submit-btn:hover {
+    background-color: #5c495c !important;
+}
+
+.form-submit-input:focus {
+    background-color: #ffffff !important;
+    border: 1px solid var(--nav-purple) !important;
+    box-shadow: none !important;
+}
+
+.premium-badge {
+    border-bottom-left-radius: 8px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+/* Прив'язка футера до низу за умови довгого/короткого екрана */
+html, body {
+    height: 100%;
+}
+
+/* Адаптивність (Медіа-запити) */
+@media (min-width: 992px) {
+    .main-logo-circle {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
